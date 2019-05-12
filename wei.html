@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>少韋報價系統</title>
+</head>
+<link rel="stylesheet" type="text/css" href="chosen.css">
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<script src="jquery-3.4.1.min.js"></script>  
+<script src="chosen.jquery.js" type="text/javascript"></script>
+
+<style type="text/css">
+    .container{
+        margin-top: 30px;
+    }
+    h6{
+        margin-top: .5rem;
+    }
+    .fll{
+        float: left;
+    }
+    .w10p{
+        width: 10%;
+    }
+    .w14p{
+        width: 14%;
+    }
+    .w15p{
+        width: 15%;
+    }
+    .w30p{
+        width: 30%;
+    }
+    .w50p{
+        width: 50%;
+    }
+    .w100p{
+        width: 100%;
+    }
+    .p13{
+        padding: 13px;
+    }
+    .mt30{
+        margin-top: 30px;
+    }
+    .red{
+      color: red;
+    }
+</style>
+
+<script type="text/javascript">
+    var result = 
+    {
+      "block_size": {
+            "normal": ["15","20","25","30","35","45","55"],
+            "MB": ["09","12","15"],
+            "MPH": ["07"]
+          },
+      "block_price": [
+            {
+              "block_type": "BGCH15BN",
+              "N": 655,
+              "H": 721,
+              "P": 793,
+              "SP": 872,
+              "UP": 959
+            },
+            {
+              "block_type": "BGCH15FL",
+              "N": 841,
+              "H": 925,
+              "P": 1018,
+              "SP": 1120,
+              "UP": 1232
+            },
+            {
+              "block_type": "BGCH15FN",
+              "N": 673,
+              "H": 740,
+              "P": 814,
+              "SP": 895,
+              "UP": 985
+            },
+            {
+              "block_type": "BGCH20BE",
+              "N": 1122,
+              "H": 1234,
+              "P": 1357,
+              "SP": 1493,
+              "UP": 1642
+            },
+            {
+              "block_type": "BGCH20BL",
+              "N": 935,
+              "H": 1029,
+              "P": 1132,
+              "SP": 1245,
+              "UP": 1370
+            },
+            {
+              "block_type": "BGCH20BN",
+              "N": 748,
+              "H": 823,
+              "P": 905,
+              "SP": 996,
+              "UP": 1096
+            },
+            {
+              "block_type": "BGCH20FE",
+              "N": 1220,
+              "H": 1342,
+              "P": 1476,
+              "SP": 1624,
+              "UP": 1786
+            },
+            {
+              "block_type": "BGCH20FL",
+              "N": 1016,
+              "H": 1118,
+              "P": 1230,
+              "SP": 1353,
+              "UP": 1488
+            },
+            {
+              "block_type": "BGCH20FN",
+              "N": 813,
+              "H": 894,
+              "P": 983,
+              "SP": 1081,
+              "UP": 1189
+            },
+            {
+              "block_type": "BGCH25BE",
+              "N": 1278,
+              "H": 1406,
+              "P": 1547,
+              "SP": 1702,
+              "UP": 1872
+            },
+            {
+              "block_type": "BGCH25BL",
+              "N": 1065,
+              "H": 1172,
+              "P": 1289,
+              "SP": 1418,
+              "UP": 1560
+            },
+            {
+              "block_type": "BGCH25BN",
+              "N": 852,
+              "H": 937,
+              "P": 1031,
+              "SP": 1134,
+              "UP": 1247
+            },
+            {
+              "block_type": "BGCH25FE",
+              "N": 1361,
+              "H": 1497,
+              "P": 1647,
+              "SP": 1812,
+              "UP": 1993
+            },
+            {
+              "block_type": "BGCH25FL",
+              "N": 1133,
+              "H": 1246,
+              "P": 1371,
+              "SP": 1508,
+              "UP": 1659
+            },
+            {
+              "block_type": "BGCH25FN",
+              "N": 907,
+              "H": 998,
+              "P": 1098,
+              "SP": 1208,
+              "UP": 1329
+            },
+            {
+              "block_type": "BGCH30BE",
+              "N": 1674,
+              "H": 1841,
+              "P": 2025,
+              "SP": 2228,
+              "UP": 2451
+            },
+            {
+              "block_type": "BGCH30BL",
+              "N": 1395,
+              "H": 1535,
+              "P": 1689,
+              "SP": 1858,
+              "UP": 2044
+            },
+            {
+              "block_type": "BGCH30BN",
+              "N": 1116,
+              "H": 1228,
+              "P": 1351,
+              "SP": 1486,
+              "UP": 1635
+            },
+            {
+              "block_type": "BGCH30FE",
+              "N": 1748,
+              "H": 1923,
+              "P": 2115,
+              "SP": 2327,
+              "UP": 2560
+            },
+            {
+              "block_type": "BGCH30FL",
+              "N": 1456,
+              "H": 1602,
+              "P": 1762,
+              "SP": 1938,
+              "UP": 2132
+            },
+            {
+              "block_type": "BGCH30FN",
+              "N": 1165,
+              "H": 1282,
+              "P": 1410,
+              "SP": 1551,
+              "UP": 1706
+            },
+            {
+              "block_type": "BGCH30FS",
+              "N": 1107,
+              "H": 1218,
+              "P": 1340,
+              "SP": 1474,
+              "UP": 1621
+            },
+            {
+              "block_type": "BGCH35BE",
+              "N": 1980,
+              "H": 2178,
+              "P": 2396,
+              "SP": 2636,
+              "UP": 2900
+            },
+            {
+              "block_type": "BGCH35BL",
+              "N": 1650,
+              "H": 1815,
+              "P": 1997,
+              "SP": 2197,
+              "UP": 2417
+            },
+            {
+              "block_type": "BGCH35BN",
+              "N": 1320,
+              "H": 1452,
+              "P": 1597,
+              "SP": 1757,
+              "UP": 1933
+            },
+            {
+              "block_type": "BGCH35FE",
+              "N": 2019,
+              "H": 2221,
+              "P": 2443,
+              "SP": 2687,
+              "UP": 2956
+            },
+            {
+              "block_type": "BGCH35FL",
+              "N": 1682,
+              "H": 1850,
+              "P": 2035,
+              "SP": 2239,
+              "UP": 2463
+            },
+            {
+              "block_type": "BGCH35FN",
+              "N": 1346,
+              "H": 1481,
+              "P": 1629,
+              "SP": 1792,
+              "UP": 1971
+            },
+            {
+              "block_type": "BGCH35FS",
+              "N": 1279,
+              "H": 1407,
+              "P": 1548,
+              "SP": 1703,
+              "UP": 1873
+            },
+            {
+              "block_type": "BGCH45BE",
+              "N": 2985,
+              "H": 3284,
+              "P": 3612,
+              "SP": 3973,
+              "UP": 4370
+            },
+            {
+              "block_type": "BGCH45BL",
+              "N": 2487,
+              "H": 2736,
+              "P": 3010,
+              "SP": 3311,
+              "UP": 3642
+            },
+            {
+              "block_type": "BGCH45BN",
+              "N": 1990,
+              "H": 2189,
+              "P": 2408,
+              "SP": 2649,
+              "UP": 2914
+            },
+            {
+              "block_type": "BGCH45FE",
+              "N": 3045,
+              "H": 3350,
+              "P": 3685,
+              "SP": 4054,
+              "UP": 4459
+            },
+            {
+              "block_type": "BGCH45FL",
+              "N": 2538,
+              "H": 2792,
+              "P": 3071,
+              "SP": 3378,
+              "UP": 3716
+            },
+            {
+              "block_type": "BGCH45FN",
+              "N": 2030,
+              "H": 2233,
+              "P": 2456,
+              "SP": 2702,
+              "UP": 2972
+            },
+            {
+              "block_type": "BGCH55BE",
+              "N": 5672,
+              "H": 6239,
+              "P": 6863,
+              "SP": 7549,
+              "UP": 8304
+            },
+            {
+              "block_type": "BGCH55BL",
+              "N": 4726,
+              "H": 5199,
+              "P": 5719,
+              "SP": 6291,
+              "UP": 6920
+            },
+            {
+              "block_type": "BGCH55BN",
+              "N": 3781,
+              "H": 4159,
+              "P": 4575,
+              "SP": 5033,
+              "UP": 5536
+            },
+            {
+              "block_type": "BGCH55FE",
+              "N": 5784,
+              "H": 6362,
+              "P": 6998,
+              "SP": 7698,
+              "UP": 8468
+            },
+            {
+              "block_type": "BGCH55FL",
+              "N": 4820,
+              "H": 5302,
+              "P": 5832,
+              "SP": 6415,
+              "UP": 7057
+            },
+            {
+              "block_type": "BGCH55FN",
+              "N": 3856,
+              "H": 4242,
+              "P": 4666,
+              "SP": 5133,
+              "UP": 5646
+            },
+            {
+              "block_type": "BGCS15BL",
+              "N": 866,
+              "H": 953,
+              "P": 1048,
+              "SP": 1153,
+              "UP": 1268
+            },
+            {
+              "block_type": "BGCS15BN",
+              "N": 693,
+              "H": 762,
+              "P": 838,
+              "SP": 922,
+              "UP": 1014
+            },
+            {
+              "block_type": "BGCS15BS",
+              "N": 658,
+              "H": 724,
+              "P": 796,
+              "SP": 876,
+              "UP": 964
+            },
+            {
+              "block_type": "BGCS15FN",
+              "N": 673,
+              "H": 740,
+              "P": 814,
+              "SP": 895,
+              "UP": 985
+            },
+            {
+              "block_type": "BGCS15FS",
+              "N": 639,
+              "H": 703,
+              "P": 773,
+              "SP": 850,
+              "UP": 935
+            },
+            {
+              "block_type": "BGCS20BN",
+              "N": 731,
+              "H": 804,
+              "P": 884,
+              "SP": 972,
+              "UP": 1069
+            },
+            {
+              "block_type": "BGCS20BS",
+              "N": 694,
+              "H": 763,
+              "P": 839,
+              "SP": 923,
+              "UP": 1015
+            },
+            {
+              "block_type": "BGCS20FN",
+              "N": 763,
+              "H": 839,
+              "P": 923,
+              "SP": 1015,
+              "UP": 1117
+            },
+            {
+              "block_type": "BGCS20FS",
+              "N": 850,
+              "H": 935,
+              "P": 1029,
+              "SP": 1132,
+              "UP": 1245
+            },
+            {
+              "block_type": "BGCS25BN",
+              "N": 791,
+              "H": 870,
+              "P": 957,
+              "SP": 1053,
+              "UP": 1158
+            },
+            {
+              "block_type": "BGCS25BS",
+              "N": 751,
+              "H": 826,
+              "P": 909,
+              "SP": 1000,
+              "UP": 1100
+            },
+            {
+              "block_type": "BGCS25FN",
+              "N": 998,
+              "H": 1098,
+              "P": 1208,
+              "SP": 1329,
+              "UP": 1462
+            },
+            {
+              "block_type": "BGCS25FS",
+              "N": 948,
+              "H": 1043,
+              "P": 1147,
+              "SP": 1262,
+              "UP": 1388
+            },
+            {
+              "block_type": "BGCS30BE",
+              "N": 1620,
+              "H": 1782,
+              "P": 1960,
+              "SP": 2156,
+              "UP": 2372
+            },
+            {
+              "block_type": "BGCS30BL",
+              "N": 1350,
+              "H": 1485,
+              "P": 1634,
+              "SP": 1797,
+              "UP": 1977
+            },
+            {
+              "block_type": "BGCS30BN",
+              "N": 1080,
+              "H": 1188,
+              "P": 1307,
+              "SP": 1438,
+              "UP": 1582
+            },
+            {
+              "block_type": "BGCS30BS",
+              "N": 1026,
+              "H": 1129,
+              "P": 1242,
+              "SP": 1366,
+              "UP": 1503
+            },
+            {
+              "block_type": "BGCS35BE",
+              "N": 1865,
+              "H": 2052,
+              "P": 2257,
+              "SP": 2483,
+              "UP": 2731
+            },
+            {
+              "block_type": "BGCS35BL",
+              "N": 1554,
+              "H": 1709,
+              "P": 1880,
+              "SP": 2068,
+              "UP": 2275
+            },
+            {
+              "block_type": "BGCS35BN",
+              "N": 1243,
+              "H": 1367,
+              "P": 1504,
+              "SP": 1654,
+              "UP": 1819
+            },
+            {
+              "block_type": "BGCS45BE",
+              "N": 2850,
+              "H": 3135,
+              "P": 3449,
+              "SP": 3794,
+              "UP": 4173
+            },
+            {
+              "block_type": "BGCS45BL",
+              "N": 2375,
+              "H": 2613,
+              "P": 2874,
+              "SP": 3161,
+              "UP": 3477
+            },
+            {
+              "block_type": "BGCS45BN",
+              "N": 1900,
+              "H": 2090,
+              "P": 2299,
+              "SP": 2529,
+              "UP": 2782
+            },
+            {
+              "block_type": "BGCS55BE",
+              "N": 5073,
+              "H": 5580,
+              "P": 6138,
+              "SP": 6752,
+              "UP": 7427
+            },
+            {
+              "block_type": "BGCS55BL",
+              "N": 4228,
+              "H": 4651,
+              "P": 5116,
+              "SP": 5628,
+              "UP": 6191
+            },
+            {
+              "block_type": "BGCS55BN",
+              "N": 3382,
+              "H": 3720,
+              "P": 4092,
+              "SP": 4501,
+              "UP": 4951
+            },
+            {
+              "block_type": "BGCX25BE",
+              "N": 1246,
+              "H": 1371,
+              "P": 1508,
+              "SP": 1659,
+              "UP": 1825
+            },
+            {
+              "block_type": "BGCX25BL",
+              "N": 1038,
+              "H": 1142,
+              "P": 1256,
+              "SP": 1382,
+              "UP": 1520
+            },
+            {
+              "block_type": "BGCX25BN",
+              "N": 831,
+              "H": 914,
+              "P": 1005,
+              "SP": 1106,
+              "UP": 1217
+            },
+            {
+              "block_type": "BGXH15BN",
+              "N": 524,
+              "H": 576,
+              "P": 634,
+              "SP": 697,
+              "UP": 767
+            },
+            {
+              "block_type": "BGXH15FL",
+              "N": 673,
+              "H": 740,
+              "P": 814,
+              "SP": 895,
+              "UP": 985
+            },
+            {
+              "block_type": "BGXH15FN",
+              "N": 538,
+              "H": 592,
+              "P": 651,
+              "SP": 716,
+              "UP": 788
+            },
+            {
+              "block_type": "BGXH20BE",
+              "N": 897,
+              "H": 987,
+              "P": 1086,
+              "SP": 1195,
+              "UP": 1315
+            },
+            {
+              "block_type": "BGXH20BL",
+              "N": 748,
+              "H": 823,
+              "P": 905,
+              "SP": 996,
+              "UP": 1096
+            },
+            {
+              "block_type": "BGXH20BN",
+              "N": 598,
+              "H": 658,
+              "P": 724,
+              "SP": 796,
+              "UP": 876
+            },
+            {
+              "block_type": "BGXH20FE",
+              "N": 975,
+              "H": 1073,
+              "P": 1180,
+              "SP": 1298,
+              "UP": 1428
+            },
+            {
+              "block_type": "BGXH20FL",
+              "N": 813,
+              "H": 894,
+              "P": 983,
+              "SP": 1081,
+              "UP": 1189
+            },
+            {
+              "block_type": "BGXH20FN",
+              "N": 650,
+              "H": 715,
+              "P": 787,
+              "SP": 866,
+              "UP": 953
+            },
+            {
+              "block_type": "BGXH25BE",
+              "N": 1065,
+              "H": 1172,
+              "P": 1289,
+              "SP": 1418,
+              "UP": 1560
+            },
+            {
+              "block_type": "BGXH25BL",
+              "N": 888,
+              "H": 977,
+              "P": 1075,
+              "SP": 1183,
+              "UP": 1301
+            },
+            {
+              "block_type": "BGXH25BN",
+              "N": 710,
+              "H": 781,
+              "P": 859,
+              "SP": 945,
+              "UP": 1040
+            },
+            {
+              "block_type": "BGXH25FE",
+              "N": 1134,
+              "H": 1247,
+              "P": 1372,
+              "SP": 1509,
+              "UP": 1660
+            },
+            {
+              "block_type": "BGXH25FL",
+              "N": 945,
+              "H": 1040,
+              "P": 1144,
+              "SP": 1258,
+              "UP": 1384
+            },
+            {
+              "block_type": "BGXH25FN",
+              "N": 756,
+              "H": 832,
+              "P": 915,
+              "SP": 1007,
+              "UP": 1108
+            },
+            {
+              "block_type": "BGXH30BE",
+              "N": 1395,
+              "H": 1535,
+              "P": 1689,
+              "SP": 1858,
+              "UP": 2044
+            },
+            {
+              "block_type": "BGXH30BL",
+              "N": 1163,
+              "H": 1279,
+              "P": 1407,
+              "SP": 1548,
+              "UP": 1703
+            },
+            {
+              "block_type": "BGXH30BN",
+              "N": 930,
+              "H": 1023,
+              "P": 1125,
+              "SP": 1238,
+              "UP": 1362
+            },
+            {
+              "block_type": "BGXH30FE",
+              "N": 1457,
+              "H": 1603,
+              "P": 1763,
+              "SP": 1939,
+              "UP": 2133
+            },
+            {
+              "block_type": "BGXH30FL",
+              "N": 1214,
+              "H": 1335,
+              "P": 1469,
+              "SP": 1616,
+              "UP": 1778
+            },
+            {
+              "block_type": "BGXH30FN",
+              "N": 971,
+              "H": 1068,
+              "P": 1175,
+              "SP": 1293,
+              "UP": 1422
+            },
+            {
+              "block_type": "BGXH30FS",
+              "N": 922,
+              "H": 1014,
+              "P": 1115,
+              "SP": 1227,
+              "UP": 1350
+            },
+            {
+              "block_type": "BGXH35BE",
+              "N": 1650,
+              "H": 1815,
+              "P": 1997,
+              "SP": 2197,
+              "UP": 2417
+            },
+            {
+              "block_type": "BGXH35BL",
+              "N": 1375,
+              "H": 1513,
+              "P": 1664,
+              "SP": 1830,
+              "UP": 2013
+            },
+            {
+              "block_type": "BGXH35BN",
+              "N": 1100,
+              "H": 1210,
+              "P": 1331,
+              "SP": 1464,
+              "UP": 1610
+            },
+            {
+              "block_type": "BGXH35FE",
+              "N": 1683,
+              "H": 1851,
+              "P": 2036,
+              "SP": 2240,
+              "UP": 2464
+            },
+            {
+              "block_type": "BGXH35FL",
+              "N": 1403,
+              "H": 1543,
+              "P": 1697,
+              "SP": 1867,
+              "UP": 2054
+            },
+            {
+              "block_type": "BGXH35FN",
+              "N": 1122,
+              "H": 1234,
+              "P": 1357,
+              "SP": 1493,
+              "UP": 1642
+            },
+            {
+              "block_type": "BGXH35FS",
+              "N": 1066,
+              "H": 1173,
+              "P": 1290,
+              "SP": 1419,
+              "UP": 1561
+            },
+            {
+              "block_type": "BGXH45BE",
+              "N": 2487,
+              "H": 2736,
+              "P": 3010,
+              "SP": 3311,
+              "UP": 3642
+            },
+            {
+              "block_type": "BGXH45BL",
+              "N": 2073,
+              "H": 2280,
+              "P": 2508,
+              "SP": 2759,
+              "UP": 3035
+            },
+            {
+              "block_type": "BGXH45BN",
+              "N": 1658,
+              "H": 1824,
+              "P": 2006,
+              "SP": 2207,
+              "UP": 2428
+            },
+            {
+              "block_type": "BGXH45FE",
+              "N": 2538,
+              "H": 2792,
+              "P": 3071,
+              "SP": 3378,
+              "UP": 3716
+            },
+            {
+              "block_type": "BGXH45FL",
+              "N": 2115,
+              "H": 2327,
+              "P": 2560,
+              "SP": 2816,
+              "UP": 3098
+            },
+            {
+              "block_type": "BGXH45FN",
+              "N": 1692,
+              "H": 1861,
+              "P": 2047,
+              "SP": 2252,
+              "UP": 2477
+            },
+            {
+              "block_type": "BGXH55BE",
+              "N": 4727,
+              "H": 5200,
+              "P": 5720,
+              "SP": 6292,
+              "UP": 6921
+            },
+            {
+              "block_type": "BGXH55BL",
+              "N": 3939,
+              "H": 4333,
+              "P": 4766,
+              "SP": 5243,
+              "UP": 5767
+            },
+            {
+              "block_type": "BGXH55BN",
+              "N": 3151,
+              "H": 3466,
+              "P": 3813,
+              "SP": 4194,
+              "UP": 4613
+            },
+            {
+              "block_type": "BGXH55FE",
+              "N": 4820,
+              "H": 5302,
+              "P": 5832,
+              "SP": 6415,
+              "UP": 7057
+            },
+            {
+              "block_type": "BGXH55FL",
+              "N": 4016,
+              "H": 4418,
+              "P": 4860,
+              "SP": 5346,
+              "UP": 5881
+            },
+            {
+              "block_type": "BGXH55FN",
+              "N": 3213,
+              "H": 3534,
+              "P": 3887,
+              "SP": 4276,
+              "UP": 4704
+            },
+            {
+              "block_type": "BGXS15BL",
+              "N": 639,
+              "H": 703,
+              "P": 773,
+              "SP": 850,
+              "UP": 935
+            },
+            {
+              "block_type": "BGXS15BN",
+              "N": 511,
+              "H": 562,
+              "P": 618,
+              "SP": 680,
+              "UP": 748
+            },
+            {
+              "block_type": "BGXS15BS",
+              "N": 485,
+              "H": 534,
+              "P": 587,
+              "SP": 646,
+              "UP": 711
+            },
+            {
+              "block_type": "BGXS15FN",
+              "N": 592,
+              "H": 651,
+              "P": 716,
+              "SP": 788,
+              "UP": 867
+            },
+            {
+              "block_type": "BGXS15FS",
+              "N": 562,
+              "H": 618,
+              "P": 680,
+              "SP": 748,
+              "UP": 823
+            },
+            {
+              "block_type": "BGXS20BN",
+              "N": 585,
+              "H": 644,
+              "P": 708,
+              "SP": 779,
+              "UP": 857
+            },
+            {
+              "block_type": "BGXS20BS",
+              "N": 556,
+              "H": 612,
+              "P": 673,
+              "SP": 740,
+              "UP": 814
+            },
+            {
+              "block_type": "BGXS20FN",
+              "N": 715,
+              "H": 787,
+              "P": 866,
+              "SP": 953,
+              "UP": 1048
+            },
+            {
+              "block_type": "BGXS20FS",
+              "N": 679,
+              "H": 747,
+              "P": 822,
+              "SP": 904,
+              "UP": 994
+            },
+            {
+              "block_type": "BGXS25BN",
+              "N": 659,
+              "H": 725,
+              "P": 798,
+              "SP": 878,
+              "UP": 966
+            },
+            {
+              "block_type": "BGXS25BS",
+              "N": 626,
+              "H": 689,
+              "P": 758,
+              "SP": 834,
+              "UP": 917
+            },
+            {
+              "block_type": "BGXS25FN",
+              "N": 832,
+              "H": 915,
+              "P": 1007,
+              "SP": 1108,
+              "UP": 1219
+            },
+            {
+              "block_type": "BGXS25FS",
+              "N": 790,
+              "H": 869,
+              "P": 956,
+              "SP": 1052,
+              "UP": 1157
+            },
+            {
+              "block_type": "BGXS30BE",
+              "N": 1350,
+              "H": 1485,
+              "P": 1634,
+              "SP": 1797,
+              "UP": 1977
+            },
+            {
+              "block_type": "BGXS30BL",
+              "N": 1125,
+              "H": 1238,
+              "P": 1362,
+              "SP": 1498,
+              "UP": 1648
+            },
+            {
+              "block_type": "BGXS30BN",
+              "N": 900,
+              "H": 990,
+              "P": 1089,
+              "SP": 1198,
+              "UP": 1318
+            },
+            {
+              "block_type": "BGXS30BS",
+              "N": 855,
+              "H": 941,
+              "P": 1035,
+              "SP": 1139,
+              "UP": 1253
+            },
+            {
+              "block_type": "BGXS35BE",
+              "N": 1554,
+              "H": 1709,
+              "P": 1880,
+              "SP": 2068,
+              "UP": 2275
+            },
+            {
+              "block_type": "BGXS35BL",
+              "N": 1295,
+              "H": 1425,
+              "P": 1568,
+              "SP": 1725,
+              "UP": 1898
+            },
+            {
+              "block_type": "BGXS35BN",
+              "N": 1036,
+              "H": 1140,
+              "P": 1254,
+              "SP": 1379,
+              "UP": 1517
+            },
+            {
+              "block_type": "BGXS35BS",
+              "N": 984,
+              "H": 1082,
+              "P": 1190,
+              "SP": 1309,
+              "UP": 1440
+            },
+            {
+              "block_type": "BGXS45BE",
+              "N": 2375,
+              "H": 2613,
+              "P": 2874,
+              "SP": 3161,
+              "UP": 3477
+            },
+            {
+              "block_type": "BGXS45BL",
+              "N": 1979,
+              "H": 2177,
+              "P": 2395,
+              "SP": 2635,
+              "UP": 2899
+            },
+            {
+              "block_type": "BGXS45BN",
+              "N": 1583,
+              "H": 1741,
+              "P": 1915,
+              "SP": 2107,
+              "UP": 2318
+            },
+            {
+              "block_type": "BGXS55BE",
+              "N": 4227,
+              "H": 4650,
+              "P": 5115,
+              "SP": 5627,
+              "UP": 6190
+            },
+            {
+              "block_type": "BGXS55BL",
+              "N": 3523,
+              "H": 3875,
+              "P": 4263,
+              "SP": 4689,
+              "UP": 5158
+            },
+            {
+              "block_type": "BGXS55BN",
+              "N": 2818,
+              "H": 3100,
+              "P": 3410,
+              "SP": 3751,
+              "UP": 4126
+            },
+            {
+              "block_type": "BGXX25BE",
+              "N": 1038,
+              "H": 1142,
+              "P": 1256,
+              "SP": 1382,
+              "UP": 1520
+            },
+            {
+              "block_type": "BGXX25BL",
+              "N": 865,
+              "H": 952,
+              "P": 1047,
+              "SP": 1152,
+              "UP": 1267
+            },
+            {
+              "block_type": "BGXX25BN",
+              "N": 692,
+              "H": 761,
+              "P": 837,
+              "SP": 921,
+              "UP": 1013
+            },
+            {
+              "block_type": "MBCD09SN",
+              "N": 518,
+              "H": 596,
+              "P": 685,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD09SL",
+              "N": 596,
+              "H": 685,
+              "P": 788,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD09WN",
+              "N": 749,
+              "H": 861,
+              "P": 990,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD09WL",
+              "N": 861,
+              "H": 990,
+              "P": 1139,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD12SN",
+              "N": 554,
+              "H": 637,
+              "P": 733,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD12SL",
+              "N": 637,
+              "H": 733,
+              "P": 843,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD12WN",
+              "N": 780,
+              "H": 897,
+              "P": 1032,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD12WL",
+              "N": 897,
+              "H": 1032,
+              "P": 1187,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD15SN",
+              "N": 594,
+              "H": 683,
+              "P": 785,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD15SL",
+              "N": 683,
+              "H": 785,
+              "P": 903,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD15WN",
+              "N": 962,
+              "H": 1106,
+              "P": 1272,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBCD15WL",
+              "N": 1106,
+              "H": 1272,
+              "P": 1463,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD09SN",
+              "N": 371,
+              "H": 427,
+              "P": 491,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD09SL",
+              "N": 427,
+              "H": 314,
+              "P": 361,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD09WN",
+              "N": 555,
+              "H": 638,
+              "P": 734,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD09WL",
+              "N": 638,
+              "H": 734,
+              "P": 844,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD12SN",
+              "N": 411,
+              "H": 473,
+              "P": 544,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD12SL",
+              "N": 473,
+              "H": 544,
+              "P": 626,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD12WN",
+              "N": 600,
+              "H": 690,
+              "P": 508,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD12WL",
+              "N": 750,
+              "H": 863,
+              "P": 992,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD15SN",
+              "N": 440,
+              "H": 506,
+              "P": 349,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD15SL",
+              "N": 506,
+              "H": 582,
+              "P": 669,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD15WN",
+              "N": 740,
+              "H": 851,
+              "P": 979,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MBXD15WL",
+              "N": 851,
+              "H": 979,
+              "P": 1126,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "block_type": "MPHD07SN",
+              "N": 596,
+              "H": 685,
+              "P": 788,
+              "SP": "",
+              "UP": ""
+            }
+      ],
+      "rail_price":[
+            {
+              "rail_item": "BGR15C",
+              "linear_guide": "BG",
+              "length": 15,
+              "pitch": 60,
+              "rail_type": "C",
+              "N": 4994,
+              "H": 5493,
+              "P": 6042,
+              "SP": 6646,
+              "UP": 7311
+            },
+            {
+              "rail_item": "BGR15L",
+              "linear_guide": "BG",
+              "length": 15,
+              "pitch": 60,
+              "rail_type": "L",
+              "N": 4540,
+              "H": 4994,
+              "P": 5493,
+              "SP": 6042,
+              "UP": 6646
+            },
+            {
+              "rail_item": "BGR20C",
+              "linear_guide": "BG",
+              "length": 20,
+              "pitch": 60,
+              "rail_type": "C",
+              "N": 5786,
+              "H": 6365,
+              "P": 7002,
+              "SP": 7702,
+              "UP": 8472
+            },
+            {
+              "rail_item": "BGR20L",
+              "linear_guide": "BG",
+              "length": 20,
+              "pitch": 60,
+              "rail_type": "L",
+              "N": 5260,
+              "H": 5786,
+              "P": 6365,
+              "SP": 7002,
+              "UP": 7702
+            },
+            {
+              "rail_item": "BGR25C",
+              "linear_guide": "BG",
+              "length": 25,
+              "pitch": 60,
+              "rail_type": "C",
+              "N": 6556,
+              "H": 7212,
+              "P": 7933,
+              "SP": 8726,
+              "UP": 9599
+            },
+            {
+              "rail_item": "BGR25L",
+              "linear_guide": "BG",
+              "length": 25,
+              "pitch": 60,
+              "rail_type": "L",
+              "N": 5960,
+              "H": 6556,
+              "P": 7212,
+              "SP": 7933,
+              "UP": 8726
+            },
+            {
+              "rail_item": "BGR30C",
+              "linear_guide": "BG",
+              "length": 30,
+              "pitch": 80,
+              "rail_type": "C",
+              "N": 7392,
+              "H": 8131,
+              "P": 8944,
+              "SP": 9838,
+              "UP": 10822
+            },
+            {
+              "rail_item": "BGR30L",
+              "linear_guide": "BG",
+              "length": 30,
+              "pitch": 80,
+              "rail_type": "L",
+              "N": 6720,
+              "H": 7392,
+              "P": 8131,
+              "SP": 8944,
+              "UP": 9838
+            },
+            {
+              "rail_item": "BGR35C",
+              "linear_guide": "BG",
+              "length": 35,
+              "pitch": 80,
+              "rail_type": "C",
+              "N": 9361,
+              "H": 10297,
+              "P": 11327,
+              "SP": 12460,
+              "UP": 13706
+            },
+            {
+              "rail_item": "BGR35L",
+              "linear_guide": "BG",
+              "length": 35,
+              "pitch": 80,
+              "rail_type": "L",
+              "N": 8510,
+              "H": 9361,
+              "P": 10297,
+              "SP": 11327,
+              "UP": 12460
+            },
+            {
+              "rail_item": "BGR45C",
+              "linear_guide": "BG",
+              "length": 45,
+              "pitch": 105,
+              "rail_type": "C",
+              "N": 13167,
+              "H": 14484,
+              "P": 15932,
+              "SP": 17525,
+              "UP": 19278
+            },
+            {
+              "rail_item": "BGR45L",
+              "linear_guide": "BG",
+              "length": 45,
+              "pitch": 105,
+              "rail_type": "L",
+              "N": 11970,
+              "H": 13167,
+              "P": 14484,
+              "SP": 15932,
+              "UP": 17525
+            },
+            {
+              "rail_item": "BGR55C",
+              "linear_guide": "BG",
+              "length": 55,
+              "pitch": 120,
+              "rail_type": "C",
+              "N": 19459,
+              "H": 21405,
+              "P": 23546,
+              "SP": 25901,
+              "UP": 28491
+            },
+            {
+              "rail_item": "BGR55L",
+              "linear_guide": "BG",
+              "length": 55,
+              "pitch": 120,
+              "rail_type": "L",
+              "N": 17690,
+              "H": 19459,
+              "P": 21405,
+              "SP": 23546,
+              "UP": 25901
+            },
+            {
+              "rail_item": "MRSX09L",
+              "linear_guide": "MB",
+              "length": "09",
+              "pitch": 20,
+              "rail_type": "L",
+              "N": 2000,
+              "H": 1472,
+              "P": 1693,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "rail_item": "MRWX09L",
+              "linear_guide": "MB",
+              "length": "09",
+              "pitch": 30,
+              "rail_type": "L",
+              "N": 3580,
+              "H": 4117,
+              "P": 4735,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "rail_item": "MRSX12L",
+              "linear_guide": "MB",
+              "length": 12,
+              "pitch": 25,
+              "rail_type": "L",
+              "N": 2251,
+              "H": 2589,
+              "P": 2977,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "rail_item": "MRWX12L",
+              "linear_guide": "MB",
+              "length": 12,
+              "pitch": 40,
+              "rail_type": "L",
+              "N": 4100,
+              "H": 4715,
+              "P": 3470,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "rail_item": "MRSX15L",
+              "linear_guide": "MB",
+              "length": 15,
+              "pitch": 40,
+              "rail_type": "L",
+              "N": 2460,
+              "H": 2829,
+              "P": 1952,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "rail_item": "MRWX15L",
+              "linear_guide": "MB",
+              "length": 15,
+              "pitch": 40,
+              "rail_type": "L",
+              "N": 5800,
+              "H": 6670,
+              "P": 7671,
+              "SP": "",
+              "UP": ""
+            },
+            {
+              "rail_item": "MPSX07L",
+              "linear_guide": "MP",
+              "length": 7,
+              "pitch": 20,
+              "rail_type": "L",
+              "N": 2400,
+              "H": 2760,
+              "P": 3174,
+              "SP": "",
+              "UP": ""
+            }
+      ],
+      "precision_select": [
+        "N","H","P","SP","UP"
+      ],
+      "preload_type": {
+            "BG":[
+              {"Z": "1"},
+              {"Z": "1"},
+              {"Z": "1.2"},
+              {"Z": "1.2"}
+            ],
+            "MB":[
+              {"Z": "1.1"},
+              {"Z": "1.1"}
+            ],
+            "MP": [
+              {"Z": "1.1"},
+              {"Z": "1.1"}
+            ]
+      }
+    }
+    result.filter_rail_type = "";
+    result.tmp_input = {};
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        console.log(result)
+        // 滑塊樣式option載入
+        $('#block_type_select').append(function(){
+            var options = "<option value=''></option>";
+            console.log(result.block_price.length)
+            for(var i = 0; i < result.block_price.length; i++){
+                options += "<option value=" + result.block_price[i].block_type + ">" + result.block_price[i].block_type + "</option>";
+            }
+            return options;
+        });
+        // 滑塊數量option載入
+        $('#slide_num_select').append(function(){
+            var options = "<option value=''>請選擇</option>";
+            for(var i = 1; i <= 15; i++){
+                options += "<option value=" + i + ">" + i + "</option>";
+            }
+            return options;
+        });
+
+
+        $(".chosen-select").chosen({
+            no_results_text: "搜尋不到：",
+            width: "112px"
+        });
+
+        //選擇滑塊樣式
+        $('#block_type_select').change(function(){
+            var block_type_select = $('#block_type_select').val(); //滑塊樣式
+            precision_select(); //精度等級選項
+
+            var linear_guide = block_type_select.substr(0, 2); //線軌樣式 取自滑塊樣式字串前二字元(start [, length ])
+            preload_type_select(linear_guide);//預壓選項
+            console.log(linear_guide)
+
+            var block_size = block_type_select.match(/\d+/)[0]; //滑塊型號 取自滑塊樣式字串數字
+            var rail_length_num = linear_guide == "BG" ? 4000 : 2000; //滑塊線軌基數
+
+            rail_type_select(""); //軌道樣式選項初始
+            $('#slide_num_select').val("");//滑塊數量選項初始
+
+            // 寫入tmp
+            result.tmp_input.block_type_select = block_type_select; //滑塊樣式
+            result.tmp_input.linear_guide = linear_guide;           //線軌樣式
+            result.tmp_input.block_size = block_size;               //線軌樣式
+            result.tmp_input.rail_length_num = rail_length_num;     //滑塊線軌基數
+            console.log(result.tmp_input.block_type_select,result.tmp_input.linear_guide,result.tmp_input.block_size,result.tmp_input.rail_length_num )
+
+        });
+
+        //選擇精度
+        $('#precision_select').change(function(){
+            var precision_select = $('#precision_select').val();
+            console.log(precision_select)
+
+            rail_type_select(result.tmp_input.linear_guide, result.tmp_input.block_size, precision_select); //軌道樣式選項
+
+            // product_item("precision_select", precision_select);//寫入型號
+            // 寫入tmp
+            result.tmp_input.precision_select = precision_select; //精度
+
+            
+        });
+
+$('#slide_num_select').change(function(){
+    calculate_block_price ();
+});
+
+        //選擇軌道樣式 計算軌道價格
+        $('#rail_type_select').change(function(){
+            var rail_type_txt = $('#rail_type_select :selected').text();
+            var precision_select = result.tmp_input.precision_select;
+            var rail_type_sel_data = result.filter_rail_type.filter(function (e) { return e.rail_item == rail_type_txt; }),
+                rail_price = rail_type_sel_data[0][precision_select]; //軌道樣式價格
+            console.log(rail_type_sel_data[0])//軌道樣式價格
+
+            // 寫入tmp
+            result.tmp_input.rail_type_txt = rail_type_txt; //輸入軌道長度
+            result.tmp_input.rail_type_sel_data = rail_type_sel_data[0]; //軌道樣式data
+            result.tmp_input.rail_price = rail_price; //軌道樣式價格
+
+
+        });
+
+        //輸入軌道長度 計算軌道價格
+        $('#rail_length').change(function(){
+            
+            var input_rail_length = $('#rail_length').val();   //輸入軌道長度
+            
+
+            // 寫入tmp
+            result.tmp_input.input_rail_length = input_rail_length; //輸入軌道價格
+            console.log(result.tmp_input.input_rail_length)
+            calculate_rail_price(result.tmp_input.rail_price); // 計算軌道價格
+        });
+
+        // 計算
+        $('#cal_btn').click(function(){
+            // 驗證
+            // var calculate_block_price = calculate_block_price(),
+            //     calculate_rail_price = calculate_rail_price(),
+            //     original_price = ( calculate_block_price + calculate_rail_price ) * 1.1,
+            //     total_price = original_price * $('#discount').val();
+
+            var original_price = ( calculate_block_price() + calculate_rail_price() ) * 1.1,
+                total_price = original_price * $('#discount').val();  
+
+            $('#total_block_price').text(calculate_block_price());
+            $('#total_rail_price').text(calculate_rail_price());
+            $('#original_price').text(Math.round(original_price));
+            $('#total_price').text(Math.round(total_price));
+           
+            // 寫入型號
+            //清空
+            $("#block_type_select_txt, #slide_num_txt, #rail_type_txt, #rail_length_txt, #precision_select_txt, #preload_type_txt").text("");
+
+            var rail_type = $('#rail_type_select').text();
+            rail_type = rail_type.substr(-1, 1);
+
+            //寫入
+            $("#block_type_select_txt").text(result.tmp_input.block_type_select);
+            $("#slide_num_txt").text($('#slide_num_select :selected').val());
+            $("#rail_type_txt").text(rail_type);
+            $("#rail_length_txt").text($('#rail_length').val());
+            $("#precision_select_txt").text(result.tmp_input.precision_select);
+            $("#preload_type_txt").text($('#preload_type_select :selected').text());
+
+        });
+        
+        //精度等級選項
+        function precision_select (){
+            $('#precision_select').empty().append(function(){
+                var options = "<option value=''>請選擇</option>";
+                console.log(result.precision_select.length)
+                for(var i = 0; i < result.precision_select.length; i++){
+                    options += "<option value=" + result.precision_select[i] + ">" + result.precision_select[i] + "</option>";
+                }
+                return options;
+            });
+        }
+
+        //預壓選項
+        function preload_type_select (linear_guide){
+            $('#preload_type_select').empty().append(function(){
+                // var linear guide = linear guide;
+                var options = "<option value=''>請選擇</option>";
+                console.log(result.preload_type[linear_guide].length)
+                for(var i = 0; i < result.preload_type[linear_guide].length; i++){
+                    options += "<option value = " + result.preload_type[linear_guide][i]['Z'] + ">Z"+i+ "</option>";
+                }
+                return options;
+            });
+        }
+
+        //軌道樣式選項
+        function rail_type_select (linear_guide, block_size, precision_select){
+            //篩選 線軌與滑塊型號
+            var filter_rail_type = result.rail_price.filter(function (e) { 
+                                                    return e.linear_guide == linear_guide && e.length == block_size; 
+                                                });
+             result.filter_rail_type = filter_rail_type;
+             console.log(result.filter_rail_type[0])
+
+            //軌道樣式選項
+            $('#rail_type_select').empty().append(function(){
+                var options = "<option value=''>請選擇</option>";
+                for(var i = 0; i < result.filter_rail_type.length; i++){
+                    options += "<option value=" + result.filter_rail_type[i]['pitch'] + ">" + result.filter_rail_type[i]['rail_item'] + "</option>";
+                }
+                return options;
+            });
+
+        }
+
+
+        //計算滑塊價格
+        function calculate_block_price (){
+            //篩選 滑塊
+            var filter_block_type = result.block_price.filter(function (e) { 
+                                                    return e.block_type == result.tmp_input.block_type_select
+                                                });
+            console.log(filter_block_type)
+
+            var sel_block_price = filter_block_type[0][result.tmp_input.precision_select]; //所選滑塊data
+            var preload_type_select = $('#preload_type_select :selected').val(); //預壓值
+            var sel_slide_num = $('#slide_num_select :selected').val(); //滑塊數量
+
+            var total_block_price = sel_block_price * preload_type_select * sel_slide_num;
+            console.log(total_block_price +' = '+ sel_block_price +' * '+ preload_type_select +' * '+ sel_slide_num)
+            
+            // 寫入tmp
+            result.tmp_input.total_block_price = Math.round(total_block_price);
+            return Math.round(total_block_price);
+        }
+
+        //計算軌道價格
+        function calculate_rail_price (){
+
+            var pitch = result.tmp_input.rail_type_sel_data.pitch;
+            console.log(pitch)
+            // (軌道樣式價格/滑塊線軌基數 ) * (進位之(輸入軌道價格/pitch) * pitch)
+            var cal_need_rail_length =  result.tmp_input.input_rail_length / pitch;
+            console.log(cal_need_rail_length +" = "+result.tmp_input.input_rail_length +" % "+ pitch)
+            cal_need_rail_length = Math.floor(cal_need_rail_length) + 1 ; //小數點與整數無條件進位
+            console.log(Math.floor(cal_need_rail_length))
+            
+            var total_rail_price = result.tmp_input.rail_price / result.tmp_input.rail_length_num * (cal_need_rail_length * pitch);
+            console.log(total_rail_price +' = '+  result.tmp_input.rail_price +' / '+  result.tmp_input.rail_length_num +' *( '+  cal_need_rail_length + ' * '+  pitch + ' ) ' )
+            // 寫入tmp
+            result.tmp_input.total_rail_price = Math.round(total_rail_price);
+            return Math.round(total_rail_price);
+        }
+
+
+    });
+</script>
+<body>  
+    <div class="container">
+        <h1>Wei報價</h1>
+        <div class="fll col-sm-2">
+          <h6>滑塊樣式</h6>
+          <select id="block_type_select" data-placeholder="請選擇" class="chosen-select" tabindex="7">
+                <!-- append options -->
+          </select>     
+        </div>
+
+        <div class="fll col-sm-1">
+          <h6>精度</h6>
+          <select id="precision_select" class="btn btn-secondary dropdown-toggle">
+                <!-- append options -->
+          </select>
+        </div>
+
+        <div class="fll col-sm-1">
+            <h6>預壓</h6>
+            <select id="preload_type_select" class="btn btn-secondary dropdown-toggle">
+                <!-- append options -->
+            </select>
+        </div>
+
+        <div class="fll col-sm-1">
+            <h6>數量</h6>
+            <select id="slide_num_select" class="btn btn-secondary dropdown-toggle">
+                <!-- append options -->
+            </select>
+        </div>
+
+        <div class="fll col-sm-2">
+            <h6>軌道樣式</h6>
+            <select id="rail_type_select" class="btn btn-secondary dropdown-toggle">
+                <!-- append options -->
+            </select>
+        </div>
+
+        <div class="fll col-sm-2">
+            <h6>軌道長度</h6>
+            <input id="rail_length" class="w50p" type="number" placeholder="" min="0" max="4000" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"> (mm) <!-- 只能輸入正整數 -->
+        </div>
+
+        <div class="fll col-sm-2">
+            <h6>折扣</h6>
+            <input id="discount" class="w100p" type="number" min="0" onkeyup="value=value.replace(/\.{2,}/g,'.')" > <!-- 只能輸入一個小數點 -->
+        </div>
+
+        <!-- 計算 -->
+        <div class="fll col-sm-1">
+            <input class="btn btn-primary mt30" id="cal_btn" type="button" name="" value="計算">
+        </div>
+
+        <div class="fll w100p p13">
+            <hr>
+           ( <b>滑塊單價</b> $NT <span id="total_block_price" class="red"></span> 元 + <b>滑軌單價</b> $NT <span id="total_rail_price" class="red"></span> 元<span> ) * 10% 現配</span> 
+        </div>
+
+        <div class="fll w100p p13">
+            <b>原價格：</b>$NT <span id="original_price" class="red"></span> 元
+        </div>  
+
+        <div class="fll w100p p13" >
+           <b>折扣後價格：</b> $NT <span id="total_price" class="red"></span> 元
+        </div>
+        
+        <div class="fll w100p p13">
+            <b>產品型號：</b>
+            <span id="block_type_select_txt"></span>-<span id="slide_num_txt"></span>-<span id="rail_type_txt"></span><span id="rail_length_txt"></span>-<span id="precision_select_txt"></span>-<span id="preload_type_txt"></span>
+        </div>
+    </div> 
+</body>
+</html>
